@@ -15,6 +15,7 @@ def get_file_content(filePath):
     with open(filePath, 'rb') as fp:
         return fp.read()
 
+'''
 isFront = True
 
 options = {
@@ -33,17 +34,19 @@ print json.dumps(result,encoding="UTF-8", ensure_ascii=False)
 result = aipOcr.bankcard(get_file_content('bankcard.png'))
 print json.dumps(result,encoding="UTF-8", ensure_ascii=False)
 
-result = aipOcr.basicGeneral(get_file_content('general.png'))
+options = {
+  'detect_direction': 'true',
+  'language_type': 'CHN_ENG',
+}
+result = aipOcr.general(get_file_content('general.png'),options)
 print json.dumps(result,encoding="UTF-8", ensure_ascii=False)
 
-'''
 img_idcard = cv.imread(idcard_file)
 cv.imshow('idcard',img_idcard)
 
-'''
 print '*************************************************************************'
 
-'''
+
 aipFace.deleteGroupUser('stars','huge')
 add_result = aipFace.addUser(
             'huge',
@@ -68,7 +71,7 @@ print aipFace.getUser('liutao')
 
 print 'masu result---------------------------------------------------'
 print aipFace.getUser('masu')
-'''
+
 
 print 'group stars result---------------------------------------------------'
 print aipFace.getGroupUsers('stars')
@@ -79,8 +82,6 @@ options = {
     }
 identify_result =  aipFace.identifyUser('stars',get_file_content('face.jpg'))
 
-
-#'''
 options = {
     'max_face_num': 1000,
     'face_fields': "age,beauty,expression,faceshape,gender,race,qualities,landmark",
@@ -130,5 +131,4 @@ img_result = cv.imread("face_result.jpg")
 cv.imshow('dest',img_result)
 cv.waitKey(0)
 cv.destoryAllWindows()
-#'''
-
+'''
