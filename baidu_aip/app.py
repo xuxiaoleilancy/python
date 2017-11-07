@@ -1,13 +1,12 @@
+#-*-coding:utf-8 -*-
+
 from flask import Flask, request ,jsonify,abort
-import os
+from rglobal import rglobalvalues,rglobalfunc
 from baidu import baiduaip
+import os
 import json
 import base64
-
-
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-        return fp.read()
+import io
 
 app = Flask(__name__)
 
@@ -77,36 +76,46 @@ def getUser():
     return json.dumps(baiduaip.aipFace.getUser(uid),ensure_ascii=False)
 
 UPLOAD_FOLDER = './'
+
+@app.route('/rest/1.0/face/v1/getuserinofs')
+def getsrinfos():
+    return jsonify({'suirui_infos':rglobalvalues.suirui_infos})
+
 @app.route('/rest/1.0/face/v1/identify',methods=['POST'])
 def identify():
     if not request.json:
         abort(400)
 
     options = {
-        'user_top_num': 10,
-        'face_top_num': 10,
+        'user_top_num': 2,
+        'face_top_num': 2,
     }
 
-    # print 'requst-------' + request
-    #  print request.values
-    # print request.headers
-    #print request.json
-    print request.json
     groupid = request.json['group_id']
     filename = request.json['filename']
     imagedata = request.json['imagedata']
 
-    '''
-    file = open(filename,'wb')
-    file.write(base64.b64decode(imagedata))
-    file.flush()
-    file.close()
-    '''
+    result = baiduaip.aipFace.identifyUser(groupid,base64.b64decode(imagedata),options)
 
-    print 'groupid : ' + groupid
-    print 'filename : ' + filename
+    #打印 百度识别结果
+    print result
 
-    return json.dumps(baiduaip.aipFace.identifyUser(groupid,base64.b64decode(imagedata),options),ensure_ascii=False)
+    #print result
+    if result.has_key('error_code'):
+        print result
+        return json.dumps(result,ensure_ascii=False)
+
+    for i in range(0, result['result_num']):
+        uid = result['result'][i]['uid']
+        score = result['result'][i]['uid']
+        headImg = rglobalfunc.get_head_iamge_abs_path(uid)
+        if not os.path.exists(headImg):
+            headImg = rglobalfunc.get_default_head_iamge_abs_path()
+
+        result['result'][i]['imagedata'] = rglobalfunc.get_file_content_base64(headImg)
+        result['result'][i]['suirui_info'] = rglobalfunc.get_suirui_info(uid)
+    #print result
+    return json.dumps(result,ensure_ascii=False)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

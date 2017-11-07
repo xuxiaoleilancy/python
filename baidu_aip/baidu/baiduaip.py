@@ -1,7 +1,8 @@
 from aip import AipFace
 from aip import AipOcr
+import os
 
-import cv2 as cv
+#import cv2 as cv
 import json
 
 APP_ID = '10214255'
@@ -10,10 +11,6 @@ SECRET_KEY = '4zfBt6RL1M6iR6bxRZCbdSONG9VlaBjS'
 
 aipOcr = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 aipFace = AipFace(APP_ID, API_KEY, SECRET_KEY)
-
-def get_file_content(filePath):
-    with open(filePath, 'rb') as fp:
-        return fp.read()
 
 '''
 isFront = True
@@ -132,3 +129,4 @@ cv.imshow('dest',img_result)
 cv.waitKey(0)
 cv.destoryAllWindows()
 '''
+
