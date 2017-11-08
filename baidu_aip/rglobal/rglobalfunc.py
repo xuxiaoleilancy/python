@@ -4,6 +4,8 @@ import os
 import io
 from os import path
 
+dir_sep = '/'
+
 def get_suirui_info(userid):
     if rglobalvalues.suirui_infos.has_key(userid):
         return rglobalvalues.suirui_infos[userid]
@@ -19,10 +21,10 @@ def get_file_content_base64(filePath):
         return base64.b64encode(fp.read())
 
 def get_src_iamge_abs_path(uid):
-    return os.path.split(os.path.realpath(__file__))[0] + '\\files\\src_img\\' + uid + ".jpg"
+    return os.path.split(os.path.realpath(__file__))[0] + dir_sep+'files'+dir_sep+'src_img'+ dir_sep + uid + ".jpg"
 
 def get_head_iamge_abs_path(uid):
-    return os.path.split(os.path.realpath(__file__))[0] + '\\files\\result_img\\'  + "head_" + uid + ".png"
+    return os.path.split(os.path.realpath(__file__))[0] + dir_sep + 'files'+ dir_sep + 'result_img' + dir_sep  + "head_" + uid + ".png"
 
 def get_default_head_iamge_abs_path():
-    return os.path.split(os.path.realpath(__file__))[0] + '\\files\\result_img\\default\\head.png'
+    return os.path.split(os.path.realpath(__file__))[0] + dir_sep+'files' + dir_sep + 'result_img' + dir_sep + 'default' + dir_sep + 'head.png'

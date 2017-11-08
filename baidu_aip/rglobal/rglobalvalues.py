@@ -47,7 +47,7 @@ suirui_infos = {
     'name':u'陈国桂',
     'dep': u'市场营销中心',
     'pos': u'市场营销总顾问'
-    },'fujuan':{
+    },'fushujuan':{
     'name':u'付淑娟',
     'dep': u'电商与电销事业部',
     'pos': u'助理总裁兼电商与电销事业部总经理'
