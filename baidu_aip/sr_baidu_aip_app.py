@@ -46,6 +46,15 @@ def test():
     print request.headers
     return jsonify({'task':tasks})
 
+@app.route('/getsruserinfo',methods=['GET'])
+def getSrUserInfo():
+    uid = request.args['uid']
+    info = rglobalvalues.suirui_infos[uid]
+    print uid
+    print info
+    result = {uid:info}
+    return json.dumps(result, ensure_ascii=False)
+
 @app.route('/rest/1.0/face/v1/faceset/group/getlist',methods=['POST','GET'])
 def getlist():
     options = {
@@ -54,13 +63,19 @@ def getlist():
     }
     return json.dumps(baiduaip.aipFace.getGroupList( options), ensure_ascii=False)
 
-@app.route('/rest/1.0/face/v1/faceset/group/getusers', methods=['POST','GET'])
+@app.route('/rest/1.0/face/v1/faceset/group/getsrusers', methods=['POST','GET'])
+def getSRUsers():
+    groupid = 'suirui'
+    return json.dumps(rglobalvalues.suirui_infos,ensure_ascii=False)
+
+@app.route('/rest/1.0/face/v1/faceset/group/getbaiduusers', methods=['POST','GET'])
 def getusers():
     options = {
-        'start': 1,
+        'suirui': 1,
         'num': 100,
     }
-    groupid = request.args['groupid']
+    #groupid = request.args['groupid']
+    groupid = 'suirui'
     return json.dumps(baiduaip.aipFace.getGroupUsers(groupid,options),ensure_ascii=False)
 
 @app.route('/rest/1.0/face/v1/faceset/user/get', methods=['POST','GET'])

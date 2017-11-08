@@ -71,5 +71,17 @@ suirui_infos = {
     'name':u'张沿沿',
     'dep': u'法务与证券事务部',
     'pos': u'法务与证券事务部总监'
+    },'wuyun':{
+    'name':u'吴云',
+    'dep': u'业务拓展事业部',
+    'pos': u'智慧城市云事业部总经理'
+    },'lufei':{
+    'name':u'卢飞',
+    'dep': u'北京事业群',
+    'pos': u'北京事业群副总经理'
+    },'shucheng':{
+    'name':u'舒骋',
+    'dep': u'董事会办公室',
+    'pos': u'CEO'
     }
 }

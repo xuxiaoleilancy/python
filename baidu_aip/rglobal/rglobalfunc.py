@@ -3,8 +3,15 @@ import rglobalvalues
 import os
 import io
 from os import path
+import platform
 
-dir_sep = '/'
+sysstr = platform.system()
+if(sysstr =="Windows"):
+  dir_sep = '\\'
+elif(sysstr == "Linux"):
+  dir_sep = '/'
+else:
+  dir_sep = '/'
 
 def get_suirui_info(userid):
     if rglobalvalues.suirui_infos.has_key(userid):
