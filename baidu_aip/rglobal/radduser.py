@@ -12,7 +12,7 @@ def add_user(uid):
     return add_result
 
 add_uid = 'jiangsheng'
-print baiduaip.aipFace.getUser('fujuan')
+print baiduaip.aipFace.getUser('chenguogui')
 
 
 '''

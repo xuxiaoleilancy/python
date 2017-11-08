@@ -43,7 +43,7 @@ suirui_infos = {
     'name':u'曹芒',
     'dep': u'销售运营中心',
     'pos': u'高级副总裁兼COO'
-    },'chenguodong':{
+    },'chenguogui':{
     'name':u'陈国桂',
     'dep': u'市场营销中心',
     'pos': u'市场营销总顾问'

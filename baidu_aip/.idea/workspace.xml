@@ -11,17 +11,17 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/baidu_aip$baidu_aip.coverage" NAME="baidu_aip Coverage Results" MODIFIED="1510107155351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/baidu_aip$radduser.coverage" NAME="radduser Coverage Results" MODIFIED="1510106517512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rglobal" />
+    <SUITE FILE_PATH="coverage/baidu_aip$radduser.coverage" NAME="radduser Coverage Results" MODIFIED="1510109148023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rglobal" />
     <SUITE FILE_PATH="coverage/baidu_aip$baiduaip.coverage" NAME="baiduaip Coverage Results" MODIFIED="1509969553213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/baidu" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="radduser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="radduser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rglobal/radduser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="448">
+              <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="42" />
               <folding>
                 <element signature="e#1#27#0" expanded="true" />
               </folding>
@@ -29,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rglobalvalues.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="rglobalvalues.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rglobal/rglobalvalues.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+            <state relative-caret-position="480">
+              <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -78,9 +78,9 @@
         <option value="$PROJECT_DIR$/global/globalvalues.py" />
         <option value="$PROJECT_DIR$/sr_baidu_aip_app.py" />
         <option value="$PROJECT_DIR$/baidu/baiduaip.py" />
-        <option value="$PROJECT_DIR$/rglobal/rglobalvalues.py" />
         <option value="$PROJECT_DIR$/rglobal/rglobalfunc.py" />
         <option value="$PROJECT_DIR$/rglobal/radduser.py" />
+        <option value="$PROJECT_DIR$/rglobal/rglobalvalues.py" />
       </list>
     </option>
   </component>
@@ -189,7 +189,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.baidu_aip">
+  <component name="RunManager" selected="Python.radduser">
     <configuration default="false" name="baiduaip" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -424,7 +424,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="-12" width="3011" height="1634" extended-state="7" />
+    <frame x="-12" y="-12" width="3011" height="1634" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.176766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -732,14 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rglobal/rglobalvalues.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="69" column="21" lean-forward="false" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rglobal/rglobalfunc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -750,11 +742,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rglobal/radduser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="448">
+          <caret line="14" column="42" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="42" />
           <folding>
             <element signature="e#1#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rglobal/rglobalvalues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
