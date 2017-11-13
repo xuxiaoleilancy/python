@@ -1,6 +1,6 @@
 
 from baidu import baiduaip
-import rglobalfunc
+from  rglobal import rglobalfunc
 import platform
 
 def add_user(uid):

@@ -7,6 +7,7 @@ import os
 import json
 import base64
 import io
+import OpenSSL
 
 app = Flask(__name__)
 
@@ -133,4 +134,4 @@ def identify():
     return json.dumps(result,ensure_ascii=False)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5000)
+    app.run(host='0.0.0.0',port=5000, ssl_context='adhoc')
