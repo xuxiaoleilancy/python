@@ -1,6 +1,7 @@
 
 from baidu import baiduaip
 import rglobalfunc
+import platform
 
 def add_user(uid):
     add_result = baiduaip.aipFace.addUser(
@@ -11,6 +12,8 @@ def add_user(uid):
     )
     return add_result
 
+print(platform.python_version())
+print('this is python 3.5 message')
 '''
 add_uid = 'jiangsheng'
 add_user('shucheng')

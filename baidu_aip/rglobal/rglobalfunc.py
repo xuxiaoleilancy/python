@@ -1,5 +1,5 @@
 import base64
-import rglobalvalues
+from rglobal import rglobalvalues
 import os
 import io
 from os import path

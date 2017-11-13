@@ -1,7 +1,7 @@
 #-*-coding:utf-8 -*-
 
 from flask import Flask, request ,jsonify,abort
-from rglobal import rglobalvalues,rglobalfunc
+from rglobal import rglobalfunc,rglobalvalues
 from baidu import baiduaip
 import os
 import json
@@ -39,19 +39,19 @@ def readme():
 
 @app.route('/test', methods=['GET'])
 def test():
-    print request
-    print request.args
-    print request.json
-    print request.data
-    print request.headers
+    print(request)
+    print(request.args)
+    print(request.json)
+    print(request.data)
+    print(request.headers)
     return jsonify({'task':tasks})
 
 @app.route('/getsruserinfo',methods=['GET'])
 def getSrUserInfo():
     uid = request.args['uid']
     info = rglobalvalues.suirui_infos[uid]
-    print uid
-    print info
+    print(uid)
+    print(info)
     result = {uid:info}
     return json.dumps(result, ensure_ascii=False)
 
@@ -113,11 +113,11 @@ def identify():
     result = baiduaip.aipFace.identifyUser(groupid,base64.b64decode(imagedata),options)
 
     #打印 百度识别结果
-    print result
+    print(result)
 
     #print result
     if result.has_key('error_code'):
-        print result
+        print(result)
         return json.dumps(result,ensure_ascii=False)
 
     for i in range(0, result['result_num']):
