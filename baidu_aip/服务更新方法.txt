@@ -1,19 +1,15 @@
-1.ÏÂÔØ ·şÎñzip£¨svn&scpµÈ£©
+ï»¿1.ä¸‹è½½ æœåŠ¡zipï¼ˆsvn&scpç­‰ï¼‰
 
-2.½âÑ¹ 
+2.è§£å‹ 
 unzip baidu_aip.zip
-È«²¿Ìæ»»£ºA
+å…¨éƒ¨æ›¿æ¢ï¼šA
 
-3. ĞŞ¸Ä½Å±¾È¨ÏŞ¼°ÎÄ¼ş¸ñÊ½
+3. ä¿®æ”¹è„šæœ¬æƒé™åŠæ–‡ä»¶æ ¼å¼
 cd baidu_aip
 chmod a+x baidu_aip_start.sh
 vi baidu_aip_start.sh
 :set ff=unix
 :wq
 
-4. Æô¶¯·şÎñ
+4. å¯åŠ¨æœåŠ¡
 ./baidu_aip_start.sh
-
-
-
-ÌØ±ğÌáĞÑ£ºbaidu_aipÄ¿Â¼Ãû³ÆºÍÎ»ÖÃ²»ÄÜ±ä¸ü
