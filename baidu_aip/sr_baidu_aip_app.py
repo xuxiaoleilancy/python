@@ -3,13 +3,31 @@
 from flask import Flask, request ,jsonify,abort
 from rglobal import rglobalfunc,rglobalvalues
 from baidu import baiduaip
-import os
+import sys,os
 import json
 import base64
 import io
 import OpenSSL
+import string
+import re
+import requests
+import urllib.request
+
+url = 'http://192.168.61.39/api/v2/user/login?appId=beb7da4ced7c42a085c3c99697f9aa42&secretKey=3949ba59abbe56e057f20f883eadce&account=18887654321&pwd=e10adc3949ba59abbe56e057f20f883e&type=1'
+AUTH = ('admin', 'admin')
 
 app = Flask(__name__)
+
+@app.route('/bk/')
+def bk():
+    r = requests.get(url)
+    print(r.content)
+
+    return r.content
+
+    page = urllib.request.urlopen(url)
+    response = page.read().decode("UTF-8").encode('latin-1').decode('unicode_escape')
+    return  json.loads(response)
 
 @app.route('/')
 def index():
